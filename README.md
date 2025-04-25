@@ -1,0 +1,2 @@
+# restaurant
+A simple Restaurant app with focus on API with Django 
