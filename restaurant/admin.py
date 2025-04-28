@@ -1,6 +1,10 @@
 from django.contrib import admin
+from .models import Category, Booking, Menu
 
 # Register your models here.
 
-from .models import Category
+
 admin.site.register(Category)
+admin.site.register(Booking)
+admin.site.register(Menu)
+
