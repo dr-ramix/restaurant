@@ -1,0 +1,23 @@
+# Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Django migrations
+*/migrations/
+
+# Environment variables file
+.env
+
+# Virtual environment
+venv/
+env/
+
+# IDE configurations
+.vscode/
+.idea/
+
+# MacOS system files
+.DS_Store
+
+# MySQL database dump files (if you use dumps locally)
+*.sql
