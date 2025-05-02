@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from rest_framework import generics
 from .models import Menu, Booking, Category
 from .serializers import MenuSerializer, BookingSerializer, CategorySerializer
+from rest_framework.viewsets import ModelViewSet
 
 def index(request):
     return render(request, "index.html")
@@ -19,10 +20,8 @@ class SingleMenuItemView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
 
-class BookingView(generics.ListCreateAPIView):
-    queryset = Booking.objects.all()
-    serializer_class = BookingSerializer
 
-class SingleBookingView(generics.RetrieveUpdateDestroyAPIView):
+class BookingViewSet(ModelViewSet):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
+   
