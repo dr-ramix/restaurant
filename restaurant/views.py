@@ -5,6 +5,8 @@ from .models import Menu, Booking, Category
 from .serializers import MenuSerializer, BookingSerializer, CategorySerializer
 from rest_framework.viewsets import ModelViewSet
 from rest_framework import permissions
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
 
 def index(request):
     return render(request, "index.html")
